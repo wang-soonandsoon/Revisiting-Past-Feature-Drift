@@ -1,0 +1,3 @@
+[submodule "external/SLDC"]
+	path = external/SLDC
+	url = https://github.com/raoxuan98-hash/sldc.git

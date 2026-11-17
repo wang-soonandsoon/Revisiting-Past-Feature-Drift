@@ -1,0 +1,60 @@
+{
+  "dataset": "cifar100",
+  "data_root": "datasets/cifar-100-python",
+  "checkpoint": "checkpoints/B_16-i21k-300ep-lr_0.001-aug_medium1-wd_0.1-do_0.0-sd_0.0.npz",
+  "output_root": "outputs/cifar100_20",
+  "seeds": [
+    4001,
+    4002,
+    4003
+  ],
+  "classes": 100,
+  "tasks": 20,
+  "classes_per_task": 5,
+  "rank": 4,
+  "epochs": 5,
+  "batch_size": 16,
+  "feature_batch_size": 64,
+  "workers": 3,
+  "learning_rate": 0.0001,
+  "head_lr_scale": 10.0,
+  "weight_decay": 3e-05,
+  "sce_a": 0.5,
+  "sce_b": 0.5,
+  "gamma_kd": 1.0,
+  "gamma_norm": 0.1,
+  "only_lora": true,
+  "train_precision": "float32",
+  "feature_precision": "float32",
+  "attention_backend": "sdpa",
+  "backbone_type": "in21k",
+  "cpu_threads": 4,
+  "auxiliary_data": false,
+  "gamma_1": 0.0001,
+  "alpha_t": 1.0,
+  "gamma_2": 0.5,
+  "alphas": [
+    0.0001,
+    0.01,
+    1.0,
+    100.0
+  ],
+  "noise_seed": 220022,
+  "transport_jitter": 0.01,
+  "methods": [
+    "mean",
+    "joint"
+  ],
+  "test_excluded_indices": [
+    1100,
+    1357,
+    2615,
+    2996,
+    3499,
+    3932,
+    4716,
+    5564,
+    6526,
+    9524
+  ]
+}
